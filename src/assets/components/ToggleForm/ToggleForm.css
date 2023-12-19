@@ -1,0 +1,30 @@
+.form-container {
+  background: rgb(6, 6, 85);
+  padding: 0.4rem;
+}
+form.login-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: end;
+  color: #f7f7f7f7;
+  border-radius: 0.4rem;
+  left: -4rem;
+  position: relative;
+}
+
+form input[type='email'], input[type='password']{
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+}
+form button[type='submit']:hover{
+    color:orange
+}
+
+form.login-container .user-name-input {
+  width: 13rem;
+  border-radius: 0.5rem;
+  color: black;
+}

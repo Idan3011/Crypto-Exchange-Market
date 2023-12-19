@@ -1,0 +1,26 @@
+div.tradingview-widget-container{
+    width: 100% !important;
+    height: 610px !important;
+    margin-top: -0.7rem !important;
+    padding-top: 3rem !important;
+    padding: 4rem 2rem !important;
+    background: #ece5e5 !important;
+    position: relative;
+}
+
+div.tradingview-widget-container__widget{
+    margin-top:1rem
+}
+
+.chart-header {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+    height: 4rem;
+    align-items: center;
+    align-self: center;
+    padding: 1rem;
+    font-family: 'Outfit';
+    text-transform: none;
+}

@@ -1,0 +1,59 @@
+
+.bg-body-tertiary img {
+  width: 17.6rem;
+  position: absolute;
+  height: 2.5rem;
+  margin-left: 4rem;
+  margin-top: -1.3rem;
+}
+
+#navbarScroll.navbar-collapse.collapse {
+  margin-left: 29rem;
+}
+
+button.btn.btn-outline-success {
+  margin-right: 6rem;
+  color: #ffffff;
+  background: orange;
+  border: 0.1rem solid orange;
+  font-weight: 700;
+  font-family: "Varela Round";
+}
+
+button.btn.btn-outline-success:hover {
+  background: #ffffff;
+  color: black;
+  border: 0.1rem solid #ffffff;
+}
+
+.me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll {
+  gap: 4rem;
+  margin-left: -3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll a {
+  text-decoration: none;
+  transition: 0.2s;
+  color: #736da1;
+}
+.me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll a:hover {
+  color: orange;
+}
+
+a.dropdown-menu.show {
+  text-align: center;
+}
+a.dropdown-item:hover {
+  background-color: #ffffff;
+}
+
+nav.bg-body-tertiary.navbar.navbar-expand-lg.navbar-light {
+  height: 5rem;
+}
+.disabled-link {
+  color: gray;
+  cursor: not-allowed;
+  pointer-events: none;
+}

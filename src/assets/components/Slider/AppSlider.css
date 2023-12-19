@@ -1,0 +1,133 @@
+.slider-container {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.slider-container .slide {
+  display: inline-block;
+  justify-content: center;
+}
+.slider-container .slide img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  height: 34rem;
+}
+
+.slick-dots li button:before {
+  font-family: "slick";
+  font-size: 17px;
+  line-height: 20px;
+  position: absolute;
+  top: -47px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "•";
+  text-align: center;
+  opacity: 1;
+  color: #cfcfcf;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: orange;
+}
+
+.slick-arrow {
+  color: #000;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.slick-prev {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.slick-next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+button.slick-arrow.slick-next::before {
+  margin-left: -1rem;
+}
+
+.animation {
+  margin-top: -29rem;
+  margin-left: 4rem;
+  width: 27rem;
+  height: 18rem;
+}
+
+.slider-container .animation h1,
+.animation p {
+  color: #f7f7f7f7 !important;
+  opacity: 1;
+  z-index: 1;
+  position: relative;
+  font-family: "Cabin Sketch", sans-serif;
+  font-family: "Gasoek One", sans-serif;
+  opacity: 0;
+}
+
+.animation h1 {
+  width: 23rem;
+  background: orange;
+  animation: slideFromTop 1s forwards ease-in-out;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 100;
+}
+
+.animation .heading1 {
+  width: 28rem;
+  background: orange;
+  animation: slideFromTop 1s forwards ease-in-out;
+}
+
+.animation .h1-bit {
+  font-size: 1.5rem;
+  width: 15rem;
+  letter-spacing: 0.2rem;
+  font-weight: 100;
+}
+.animation p {
+  font-family: "Varela Round", sans-serif;
+  animation: slideFromRight 1s forwards ease-in-out;
+}
+.animation h1 {
+  width: 17rem;
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
