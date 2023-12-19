@@ -1,6 +1,6 @@
 import axois from "../../../data/cryptoApi";
 import React, { useEffect, useState } from "react";
-import "./fetchCoin.css";
+import '../FetchCoin/FetchCoin.css';
 import Marquee from "react-fast-marquee";
 
 const FetchCoin = () => {
