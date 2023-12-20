@@ -22,7 +22,7 @@ useEffect(()=>{},[currentUser])
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
           <Navbar.Brand href="#">
-            <img src="../../public/pics/coinVerse-tag.png" alt="site-logo" />
+            <img src="/pics/coinVerse-tag.png" alt="site-logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">

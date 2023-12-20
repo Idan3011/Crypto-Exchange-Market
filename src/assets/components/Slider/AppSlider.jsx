@@ -33,7 +33,7 @@ const AppSlider = () => {
     <div className="slider-container">
       <Slider ref={sliderRef} {...settings}>
         <div className="slide">
-        <img src="/public/pics/slider/image1.jpeg" alt="Image 1" />
+        <img src="/pics/slider/image1.jpeg" alt="Image 1" />
           
           <div className="animation">
           <h1 className="heading1">Investing in Bitcoin. </h1>
