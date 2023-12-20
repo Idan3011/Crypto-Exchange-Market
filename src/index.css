@@ -1,28 +1,28 @@
 @media (max-width: 412px) {
   div.contact-container h5 {
-    display: none;
+    display: none !important;
   }
 
   nav.bg-body-tertiary.navbar.navbar-expand-lg.navbar-light {
     padding: 1rem !important;
   }
   div.member-login-container {
-    margin-left: 1rem;
+    margin-left: 1rem !important;
   }
   .member-login-container a button {
-    margin-left: 3rem;
-    padding: 0 5rem;
+    margin-left: 3rem !important;
+    padding: 0 5rem !important;
   }
   .site-logo-img {
-    width: 8.6rem;
-    position: absolute;
-    height: 2.5rem;
-    margin-left: 2rem;
-    margin-top: 0.9rem;
-    z-index: 4;
+    width: 8.6rem !important;
+    position: absolute !important;
+    height: 2.5rem !important;
+    margin-left: 2rem !important;
+    margin-top: 0.9rem !important;
+    z-index: 4 !important;
   }
   #navbarScroll.navbar-collapse.collapse.show {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 
   .me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll {
@@ -37,7 +37,7 @@
     height: 12rem !important;
     z-index: 999 !important;
     position: relative !important;
-}
+  }
 
   .me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll a {
     text-decoration: none !important;
@@ -46,53 +46,53 @@
     font-family: "Varela Round" !important;
     letter-spacing: 0.1rem !important;
   }
-  
-  .me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll a:hover{
-      color:orange !important;
-    }
-    div.chart-page{
-        min-height: 85vh;
-    background: #ece5e5;
-    }
 
-    .UserProfile .header h1 {
-        color: black;
-        font-family: cursive;
-        font-size: 1.1rem;
-    }
+  .me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll a:hover {
+    color: orange !important;
+  }
+  div.chart-page {
+    min-height: 85vh !important;
+    background: #ece5e5 !important;
+  }
 
-    .animation p {
-        font-family: "Varela Round", sans-serif;
-        animation: slideFromRight 1s forwards ease-in-out;
-        font-size: 1rem;
-        width: 12rem;
-    }
-    .animation .heading1 {
-        width: 11rem !important;
-    }
-    .cards-container {
-        display: grid;
-        width: 100%;
-        min-height: 24vh;
-        grid-template-rows: repeat(12, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        padding: 1rem 2rem;
-    }
+  .UserProfile .header h1 {
+    color: black !important;
+    font-family: cursive !important;
+    font-size: 1.1rem !important;
+  }
 
-    .cards-container a {
-        display: flex;
-        gap: 1px;
-        align-items: center;
-        padding: 25px 5px;
-        flex-direction: column;
-        border-radius: 0.5rem;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        background: rgba(247, 247, 247, 0.968627451);
-        height: 82%;
-        flex-wrap: nowrap;
-        font-family: "Lato";
-        overflow: hidden;
-        padding-bottom: 1rem;
-    }
+  .animation p {
+    font-family: "Varela Round", sans-serif !important;
+    animation: slideFromRight 1s forwards ease-in-out !important;
+    font-size: 1rem !important;
+    width: 12rem !important;
+  }
+  .animation .heading1 {
+    width: 11rem !important;
+  }
+  .cards-container {
+    display: grid !important;
+    width: 100% !important;
+    min-height: 24vh !important;
+    grid-template-rows: repeat(12, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+    padding: 1rem 2rem !important;
+  }
+
+  .cards-container a  {
+    display: flex !important;
+    gap: 1px !important;
+    align-items: center !important;
+    padding: 25px 5px !important;
+    flex-direction: column !important;
+    border-radius: 0.5rem !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+    background: rgba(247, 247, 247, 0.968627451) !important;
+    height: 82% !important;
+    flex-wrap: nowrap !important;
+    font-family: "Lato" !important;
+    overflow: hidden !important;
+    padding-bottom: 1rem !important;
+  }
 }
