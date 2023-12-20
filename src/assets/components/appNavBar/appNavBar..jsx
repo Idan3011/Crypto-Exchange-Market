@@ -10,20 +10,18 @@ import FetchCoin from "../FetchCoin/FetchCoin";
 import Login from "../Login/Login";
 import { useAuth } from "../AuthContext/AuthContext";
 import { useEffect } from "react";
-import Chart from "../../../pages/Show/Chart";
+
 function AppNavBar() {
   const { currentUser, setCurrentUser } = useAuth();
 
-
-useEffect(()=>{},[currentUser])
+  useEffect(() => {}, [currentUser]);
   return (
     <>
       <Login />
+      <img src="/pics/coinverse-tag.png" alt="site-logo" className="site-logo-img"/>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
-          <Navbar.Brand href="#">
-            <img src="/pics/coinVerse-tag.png" alt="site-logo" />
-          </Navbar.Brand>
+          <Navbar.Brand href="#"></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -32,10 +30,12 @@ useEffect(()=>{},[currentUser])
               navbarScroll
             >
               <NavLink to={"/"}>HOME</NavLink>
-              <NavLink to={"../../../pages/Show/Chart"}>REAL-TIME CHART</NavLink>
+              <NavLink to={"../../../pages/Show/Chart"}>
+                REAL-TIME CHART
+              </NavLink>
               {currentUser ? (
                 <NavLink to={"../../../pages/UserProfile/UserProfile"}>
-                  {currentUser.username}'s Portfolio
+                  {currentUser?.username}'s Portfolio
                 </NavLink>
               ) : (
                 <span className="disabled-link">Portfolio</span>
@@ -61,8 +61,3 @@ useEffect(()=>{},[currentUser])
 
 export default AppNavBar;
 
-{
-  /* <Form className="d-flex">
-              <Button variant="outline-success">REGISTER NOW</Button>
-            </Form> */
-}

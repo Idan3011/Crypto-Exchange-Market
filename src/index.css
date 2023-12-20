@@ -1,0 +1,98 @@
+@media (max-width: 412px) {
+  div.contact-container h5 {
+    display: none;
+  }
+
+  nav.bg-body-tertiary.navbar.navbar-expand-lg.navbar-light {
+    padding: 1rem !important;
+  }
+  div.member-login-container {
+    margin-left: 1rem;
+  }
+  .member-login-container a button {
+    margin-left: 3rem;
+    padding: 0 5rem;
+  }
+  .site-logo-img {
+    width: 8.6rem;
+    position: absolute;
+    height: 2.5rem;
+    margin-left: 2rem;
+    margin-top: 0.9rem;
+    z-index: 4;
+  }
+  #navbarScroll.navbar-collapse.collapse.show {
+    margin-left: 0;
+  }
+
+  .me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll {
+    gap: 1rem !important;
+    margin-left: 0rem !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 1rem !important;
+    padding: 0rem 0 !important;
+    background: #000000d9 !important;
+    border-radius: 0.5rem !important;
+    height: 12rem !important;
+    z-index: 999 !important;
+    position: relative !important;
+}
+
+  .me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll a {
+    text-decoration: none !important;
+    transition: 0.2s !important;
+    color: #d2d0e0 !important;
+    font-family: "Varela Round" !important;
+    letter-spacing: 0.1rem !important;
+  }
+  
+  .me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll a:hover{
+      color:orange !important;
+    }
+    div.chart-page{
+        min-height: 85vh;
+    background: #ece5e5;
+    }
+
+    .UserProfile .header h1 {
+        color: black;
+        font-family: cursive;
+        font-size: 1.1rem;
+    }
+
+    .animation p {
+        font-family: "Varela Round", sans-serif;
+        animation: slideFromRight 1s forwards ease-in-out;
+        font-size: 1rem;
+        width: 12rem;
+    }
+    .animation .heading1 {
+        width: 11rem !important;
+    }
+    .cards-container {
+        display: grid;
+        width: 100%;
+        min-height: 24vh;
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    .cards-container a {
+        display: flex;
+        gap: 1px;
+        align-items: center;
+        padding: 25px 5px;
+        flex-direction: column;
+        border-radius: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        background: rgba(247, 247, 247, 0.968627451);
+        height: 82%;
+        flex-wrap: nowrap;
+        font-family: "Lato";
+        overflow: hidden;
+        padding-bottom: 1rem;
+    }
+}

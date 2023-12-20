@@ -1,4 +1,5 @@
 import "./App.css";
+import './index.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import AppNavBar from "../src/assets/components/appNavBar/appNavBar.";

@@ -9,9 +9,7 @@ export const useFetch = ()=>{
         const fetchData = async()=>{
             try{
                 const response = await fetch(APIurl)
-                const result = await response.json();
-                // console.log(result);
-                
+                const result = await response.json();  
                 setData(result)
             } catch(e){
                 console.log(e);

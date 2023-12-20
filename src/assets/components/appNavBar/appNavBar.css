@@ -57,3 +57,10 @@ nav.bg-body-tertiary.navbar.navbar-expand-lg.navbar-light {
   cursor: not-allowed;
   pointer-events: none;
 }
+
+img.site-logo-img{
+  width: 18rem;
+    z-index: 4;
+    position: absolute;
+    margin-left: 3rem 
+}

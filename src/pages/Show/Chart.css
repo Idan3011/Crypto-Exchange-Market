@@ -24,3 +24,9 @@ div.tradingview-widget-container__widget{
     font-family: 'Outfit';
     text-transform: none;
 }
+
+.chart-header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

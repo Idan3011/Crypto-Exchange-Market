@@ -20,7 +20,7 @@ import {
   Area,
 } from "recharts";
 import homeStore from "../../assets/components/HomeStore/HomeStore";
-
+import Spinner from "../../assets/components/Spinner/Spinner";
 export default function Show() {
   const store = showStore();
 const data = homeStore()
@@ -45,7 +45,7 @@ const { id } = useParams();
   const CustomizedDot = () => null;
 
   if (!store.data) {
-    return <>Loading....</>;
+    return <><Spinner /></>;
   }
   return (
     <div>

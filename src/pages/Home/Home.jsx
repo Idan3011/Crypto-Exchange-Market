@@ -1,14 +1,19 @@
 import React, { useEffect } from "react";
 import homeStore from "../../assets/components/HomeStore/HomeStore";
-import { Link } from "react-router-dom";
 import AppSlider from "../../assets/components/Slider/AppSlider";
 import "./Home.scss";
 import ListItems from "../../assets/components/ListItems/ListItems";
+import fetchCoins from '../../assets/components/HomeStore/HomeStore'
 const Home = () => {
   const store = homeStore();
+  
+
+
 
   useEffect(() => {
-    store.fetchCoins();
+   
+      store.fetchCoins();
+   
   }, []);
   return (
     <>

@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { createContext } from 'react';
 import {auth} from '../../config/firebase'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-
+import { getDocs, collection} from "firebase/firestore";
+import {db} from '../../config/firebase'
 
 export const AuthContext = createContext();
 
@@ -13,7 +14,30 @@ export const useAuth = () => {
 const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const [userDetails, setUserDetails] = useState(null);
- 
+ const [adminUser, setAdminUser] = useState({})
+
+ useEffect(()=>{
+  const getAdmin = async () =>{
+    try {
+    const userColections = collection(db, 'users');
+    const querySnapshot = await getDocs(userColections)
+    const userAdminDocs = querySnapshot.docs.find((doc)=>doc.data().isAdmin)
+    
+    if (userAdminDocs) {
+      setAdminUser(userAdminDocs.data());
+    }
+
+   
+  } catch (error) {
+    console.error(error)
+  }}
+  
+  getAdmin()
+
+ },[])
+ useEffect(() => {
+
+}, [adminUser]);
  
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
@@ -59,6 +83,7 @@ const AuthContextProvider = ({ children }) => {
   const contextValue = {
     currentUser,
     userDetails,
+    adminUser,
     setCurrentUser,
     login,
     logout,

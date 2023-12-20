@@ -14,17 +14,17 @@ import { useEffect } from "react";
 
 const theme = createTheme({});
 
-const CryptoHoldingsTable = ({ userCryptoHoldings }) => {
+const CryptoHoldingsTable = ({ userCryptoHoldings, userData }) => {
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
   
-    const [page, setPage] = useState(0);
-    const [rowsPerPage, setRowsPerPage] = useState(5);
-
+    
   const [totalVal, setTotalVal] = useState(() => {
     const savedTotalVal = localStorage.getItem("totalVal");
     return savedTotalVal ? parseFloat(savedTotalVal) : 0;
   });
 
-  console.log(totalVal);
+  
 
   useEffect(() => {
     const getTotalUserCryptoValue = () => {
@@ -33,6 +33,9 @@ const CryptoHoldingsTable = ({ userCryptoHoldings }) => {
         let current_price = holding.cost / holding.amount;
         if (holding) totalValue += holding.amount * current_price;
       });
+
+      
+      
       setTotalVal(totalValue);
       localStorage.setItem("totalValue", totalVal);
     };
@@ -44,15 +47,16 @@ const CryptoHoldingsTable = ({ userCryptoHoldings }) => {
   };
 
   const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(5); 
-    setPage(0); 
+    setRowsPerPage(5);
+    setPage(0);
   };
   const totalValueRow = {
     coinName: "Total",
     amount: "",
     currentPrice: "",
     totalValue: userCryptoHoldings.reduce(
-      (total, holding) => total + holding.amount * (holding.cost / holding.amount),
+      (total, holding) =>
+        total + holding.amount * (holding.cost / holding.amount),
       0
     ),
   };
@@ -100,42 +104,42 @@ const CryptoHoldingsTable = ({ userCryptoHoldings }) => {
               {userCryptoHoldings &&
                 userCryptoHoldings.length > 0 &&
                 userCryptoHoldings
-                .slice(page * rowsPerPage, (page + 1) * rowsPerPage)
-                .map((holding) => {
-                  let current_price = holding.cost / holding.amount;
-                  const row = {
-                    coinName: holding.coinName,
-                    amount: holding.amount,
-                    currentPrice: current_price,
-                    totalValue: holding.amount * current_price,
-                  };
+                  .slice(page * rowsPerPage, (page + 1) * rowsPerPage)
+                  .map((holding) => {
+                    let current_price = holding.cost / holding.amount;
+                    const row = {
+                      coinName: holding.coinName,
+                      amount: holding.amount,
+                      currentPrice: current_price,
+                      totalValue: holding.amount * current_price,
+                    };
 
-                  return (
-                    <TableRow
-                      hover
-                      role="checkbox"
-                      tabIndex={-1}
-                      key={holding.coinId}
-                    >
-                      {columns.map((column) => {
-                        const value = row[column.id];
-                        return (
-                          <TableCell key={column.id} align={column.align}>
-                            {column.format && typeof value === "number"
-                              ? column.format(value)
-                              : value}
-                          </TableCell>
-                        );
-                      })}
-                    </TableRow>
-                  );
-                })}
+                    return (
+                      <TableRow
+                        hover
+                        role="checkbox"
+                        tabIndex={-1}
+                        key={holding.coinId}
+                      >
+                        {columns.map((column) => {
+                          const value = row[column.id];
+                          return (
+                            <TableCell key={column.id} align={column.align}>
+                              {column.format && typeof value === "number"
+                                ? column.format(value)
+                                : value}
+                            </TableCell>
+                          );
+                        })}
+                      </TableRow>
+                    );
+                  })}
 
               <TableRow className="total-value-row">
                 <TableCell>Total</TableCell>
                 <TableCell></TableCell>
                 <TableCell></TableCell>
-                <TableCell align="right">{totalVal}$</TableCell>
+                <TableCell align="right">{totalVal.toFixed(2)}$</TableCell>
               </TableRow>
             </TableBody>
           </Table>
@@ -143,7 +147,7 @@ const CryptoHoldingsTable = ({ userCryptoHoldings }) => {
         <TablePagination
           rowsPerPageOptions={[5]}
           component="div"
-          count={userCryptoHoldings.length + 1} 
+          count={userCryptoHoldings.length + 1}
           rowsPerPage={rowsPerPage}
           page={page}
           onPageChange={handleChangePage}

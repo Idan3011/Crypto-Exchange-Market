@@ -44,7 +44,7 @@ useEffect(()=>{
     <p>here you can see all your assets!</p>
   </div>
   
-    <Assets   userCryptoHoldings={userCryptoHoldings}/>
+    <Assets   userCryptoHoldings={userCryptoHoldings} userData={currentUser}/>
     </div>
   )
 };

@@ -1,26 +1,16 @@
 import { collection, doc, getDocs, updateDoc } from 'firebase/firestore';
 import { db } from '../../config/firebase';
-import { useParams } from 'react-router-dom';
-import homeStore from '../HomeStore/HomeStore';
-import { useEffect, useState } from 'react';
-import { useFetch } from '../customHook/useFetch';
+
 const handleConfirm = async (currentUser, coinId, coinName, amount, currentPrice, setPopupInfo, setBuyPopupVisible, setErrorPopupVisible) => {
   
-  // const [coin, setCoin] = useState({})
-  // const {id} = useParams()
-  // const {data, error} =useFetch()
-  // const store = homeStore();
-  // useEffect(()=>{
-  //   setCoin(data?.find((coins) => coins.id === id ))
-  // },[data, id])
-  // console.log(coin);
+
   
   try {
     const totalCost = amount * currentPrice;
     const usersCollectionRef = collection(db, 'users');
     const querySnapshot = await getDocs(usersCollectionRef);
     const userDoc = querySnapshot.docs.find((doc) => doc.data().uid === currentUser.uid);
-
+    
     if (!userDoc) throw new Error('User document not found. Please log in and try again.');
 
     const currentBalance = userDoc.data().balanceUSD;
@@ -58,6 +48,7 @@ const handleConfirm = async (currentUser, coinId, coinName, amount, currentPrice
       title: 'Purchase successful!',
       content: `You have successfully purchased ${amount} ${coinName} for $${totalCost.toFixed(2)}.`,
     });
+    
     setBuyPopupVisible(true);
   } catch (error) {
     handlePopupError(error, setErrorPopupVisible, setPopupInfo);
