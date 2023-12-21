@@ -95,4 +95,28 @@
     overflow: hidden !important;
     padding-bottom: 1rem !important;
   }
+  form.login-container {
+    display: flex !important;
+    width: 100% !important;
+    flex-direction: row !important;
+    gap: 1rem !important;
+    justify-content: end !important;
+    color: #f7f7f7f7 !important;
+    border-radius: 0.4rem !important;
+    left: -9rem !important;
+    position: relative !important;
+}
+form.login-container input {
+  
+    border: 1px solid #090909 !important ;
+    padding: 0px 24px !important;
+    border-radius: 8px !important;
+    line-height: 54px !important;
+    width: 6rem !important;
+    margin-left: -1rem !important;
+  font-size: 0.7rem;
+}
+.member-login-container button h5 svg{
+  display: none;
+}
 }
